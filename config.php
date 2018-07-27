@@ -5,10 +5,10 @@ $_CONFIG=array(	'siteTitle'=>'سیستم مدیریت محتوای سمح',
 				'ftp_host'=>'',
 				'ftp_user'=>'',
 				'ftp_pass'=>'',
-				'db_host'=>'',
-				'db_user'=>'',
+				'db_host'=>'localhost',
+				'db_user'=>'root',
 				'db_pass'=>'',
-				'db_name'=>''
+				'db_name'=>'smh'
 				);
 
 
