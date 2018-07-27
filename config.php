@@ -11,5 +11,4 @@ $_CONFIG=array(	'siteTitle'=>'سیستم مدیریت محتوای سمح',
 				'db_name'=>'smh'
 				);
 
-
 ?>
