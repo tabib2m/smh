@@ -1,10 +1,14 @@
 <?php
-//for the master
+require_once($path."config.php");
 
-//connect to db file
-//this is a new comment
-//what is this?
+$queryHandle=mysqli_connect($_CONFIG['db_host'],$_CONFIG['db_user'],$_CONFIG['db_pass'],$_CONFIG['db_name']);
 
-echo "this is the Master branch! merged with test";
-
+function query($query,$showError=true){
+	global $queryHandle;
+	
+	$q=mysqli_query($queryHandle,$query);
+	if($showError) echo mysql_error();
+	
+	return $q;
+}
 ?>
