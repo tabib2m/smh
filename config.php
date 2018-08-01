@@ -8,7 +8,8 @@ $_CONFIG=array(	'siteTitle'=>'سیستم مدیریت محتوای سمح',
 				'db_host'=>'localhost',
 				'db_user'=>'root',
 				'db_pass'=>'',
-				'db_name'=>'smh'
+				'db_name'=>'smh',
+			   	'defaultTimezone'=>'Asia/Tehran'
 				);
 
 ?>
