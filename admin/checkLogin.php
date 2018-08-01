@@ -81,41 +81,10 @@ if($LOGIN){
 	$q=query("replace into `logins` set `user`='$USER' , `browser`='$theBrowser' , `token`='$token' , `expire`='$expire' , `saveCookie`='$saveCookie'");
 	
 }else{
-	showForm();
-}
-
-
-
-function showForm(){
-	global $USER , $PASS ,$path;;
-	?>
-	<form method="post">
-		<table cellpadding="5" align="left">
-			<tr>
-				<td valign="bottom">
-					نام کاربری:
-				</td>
-				<td valign="bottom">
-					<input type="text" name="username" value="<?=$USER;?>" class="text">
-				</td>
-				<td rowspan="3">
-					<img src="<?=$path;?>admin/images/login.jpg">
-				</td>
-			</tr>
-			<tr>
-				<td valign="top">
-					رمز عبور:
-				</td>
-				<td valign="top">
-					<input type="password" name="password" value="<?=$PASS;?>" class="text"><br>
-					<label for="save"><input type="checkbox" name="save" value="1" id="save" <?php if($_POST['save']) echo 'checked="checked"';?>>مرا به خاطر داشته باش</label><br>
-					<div align="left">
-						<input type="submit" value="ورود" name="loginSubmit" style="width: 80px;">
-					</div>
-				</td>
-			</tr>
-		</table>
-	</form>
-	<?php
+	if(!$noRedirectToLoginPage){
+		header('HTTP/1.0 403 Forbidden');
+		header('Location: '.$path.'admin/login.php');
+		die();
+	}
 }
 ?>

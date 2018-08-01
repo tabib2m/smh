@@ -3,14 +3,9 @@ $path='../';
 require_once($path.'connect.php');
 require_once($path.'admin/checkLogin.php');
 
-?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+include('header.php');
 
-<body>
-</body>
-</html>
+
+
+include('footer.php');
+?>
