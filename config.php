@@ -9,7 +9,8 @@ $_CONFIG=array(	'siteTitle'=>'سیستم مدیریت محتوای سمح',
 				'db_user'=>'root',
 				'db_pass'=>'',
 				'db_name'=>'smh',
-			   	'defaultTimezone'=>'Asia/Tehran'
+			   	'defaultTimezone'=>'Asia/Tehran',
+			   	'saveLoginExpireAfter'=>2*7*24*60*60, //tow weeks
 				);
 
 ?>
