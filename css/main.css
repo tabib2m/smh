@@ -1,0 +1,10 @@
+/* CSS Document */
+
+@font-face {
+	font-family: iransw;
+	src: url(../font/IRANSW.woff2);
+}
+
+body{
+	font-family: iransw;
+}
