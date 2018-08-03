@@ -31,22 +31,33 @@
 				<?php
 				if($LOGIN){
 				?>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						محتوا
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">صفحات</a>
+						<a class="dropdown-item" href="#">انتشارها</a>
+						<a class="dropdown-item" href="#">عکس‌ها</a>
+						<a class="dropdown-item" href="#">فایل‌ها</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item disabled" href="#">بانک‌ها</a>
+					</div>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown
+						ابزارها
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
+						<a class="dropdown-item" href="#">جعبه‌ها</a>
+						<a class="dropdown-item" href="#">غلطانک‌ها</a>
+						<a class="dropdown-item" href="#">فرم‌ها</a>
+						<a class="dropdown-item" href="#">لیست‌ها</a>
+						<a class="dropdown-item disabled" href="#">فیلدها</a>
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
+					<a class="nav-link" href="#">تنظیمات</a>
 				</li>
 				<?php
 				}
