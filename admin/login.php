@@ -8,6 +8,12 @@ if($LOGIN){
 	header("Location: index.php");
 }
 
+$pageTitle='ورود';
+$subTitle='بخش مدیریت '.$_CONFIG['siteTitle'];
+
+$breadcrumb=array(	$path.'admin/'=>'فهرست مدیریت',
+				  	$path.'admin/login.php'=>'ورود'
+				  	);
 include('header.php');
 ?>
 <form method="post">

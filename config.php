@@ -1,5 +1,5 @@
 <?php
-$_CONFIG=array(	'siteTitle'=>'سیستم مدیریت محتوای سمح',
+$_CONFIG=array(	'siteTitle'=>'سامانه مدیریت محتوای سمح',
 				'siteAddress'=>'http://localhost/smh/',
 				'siteRoot'=>$_SERVER['DOCUMENT_ROOT'].'/smh',
 				'ftp_host'=>'',

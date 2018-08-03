@@ -22,12 +22,15 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="<?=$path;?>admin/">فهرست مدیریت</a>
 				</li>
+				<?php
+				if($LOGIN){
+				?>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>
@@ -45,13 +48,23 @@
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#">Disabled</a>
 				</li>
+				<?php
+				}
+				?>
 			</ul>
+			<?php
+			if($LOGIN){
+			?>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="جستجو" aria-label="Search">
 			</form>
+			<?php
+			}
+			?>
 		</div>
 	</nav>
 	<!-- -->
+	
 	<div class="container mt-3">
 		<div class="jumbotron mb-2">
 			<h1 class="font-weight-bold"><?=$pageTitle;?></h1>
@@ -76,73 +89,4 @@
 				?>
 			</ol>
 		</nav>
-		<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 	</div>
