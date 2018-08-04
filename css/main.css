@@ -5,6 +5,13 @@
 	src: url(../font/IRANSW.woff2);
 }
 
+@font-face {
+	font-family: iransw;
+	src: url(../font/IRANSBW.woff2);
+	font-weight: bold;
+}
+
+
 body{
 	font-family: iransw;
 }
