@@ -36,7 +36,7 @@
 						محتوا
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">صفحات</a>
+						<a class="dropdown-item" href="<?=$path;?>admin/page/">صفحات</a>
 						<a class="dropdown-item" href="#">انتشارها</a>
 						<a class="dropdown-item" href="#">عکس‌ها</a>
 						<a class="dropdown-item" href="#">فایل‌ها</a>
