@@ -1,5 +1,6 @@
 <?php
 require_once($path."config.php");
+require_once($path."func.php");
 date_default_timezone_set($_CONFIG['defaultTimezone']);
 
 
