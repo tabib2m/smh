@@ -13,4 +13,5 @@ $_CONFIG=array(	'siteTitle'=>'سامانه مدیریت محتوای سمح',
 			   	'saveLoginExpireAfter'=>2*7*24*60*60, //tow weeks
 				);
 
+$fullDateFormat = new IntlDateFormatter( "fa-FA@calendar=persian" ,IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT, 'Asia/Tehran',IntlDateFormatter::TRADITIONAL );
 ?>
