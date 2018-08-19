@@ -1,6 +1,6 @@
 <?php
 function userTitle($userID){
 	$q=query("select `fullName` from `user` where `id`='$userID'");
-	return mysqli_fetch_row($q)?$r[0]:false;
+	if($r=mysqli_fetch_row($q)) return $r[0]; else return false;
 }
 ?>
