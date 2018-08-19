@@ -4,7 +4,7 @@ if($_GET['session_id']) session_id($_GET['session_id']);
 session_start();
 
 require_once($path."connect.php");
-
+require_once($path."admin/func.php");
 
 //browser fingerprint
 if($_COOKIE['browser']){
