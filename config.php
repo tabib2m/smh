@@ -14,4 +14,5 @@ $_CONFIG=array(	'siteTitle'=>'سامانه مدیریت محتوای سمح',
 				);
 
 $fullDateFormat = new IntlDateFormatter( "fa-FA@calendar=persian" ,IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT, 'Asia/Tehran',IntlDateFormatter::TRADITIONAL );
+$fullDateFormat->setPattern("EEEE d MMMM Y - ساعت h:m a");
 ?>
