@@ -1,5 +1,7 @@
 <?php
 function pagination($page,$tedad,$t_line){
+	if(!$tedad) return false;
+	
 	$pagesCount=ceil($tedad/$t_line);
 	?>
 	<nav aria-label="فهرست صفحات">
