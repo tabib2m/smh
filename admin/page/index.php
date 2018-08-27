@@ -12,21 +12,18 @@ $breadcrumb=array(	$path.'admin/'=>'فهرست مدیریت',
 
 include($path.'admin/header.php');
 
+
+$what=$_GET['what'];
 $shart='1';
+$fieldsForSearch=array('title','desc','tags');
+$tableName='page';
+$fieldsToShow=array('title'=>array('title'=>'عنوان','link'=>true),
+					'desc'=>array('title'=>'توضیحات'),
+					'user'=>array('title'=>'کاربر','user'=>true),
+					'date'=>array('title'=>'تاریخ ایجاد','date'=>true),
+				   );
 
-$pageNum=$_GET['page'];
-if(!$pageNum) $pageNum=1;
-
-$t_line=20;
-$from=($pageNum-1)*$t_line;
-
-
-$query=query("select SQL_CALC_FOUND_ROWS * from `page` where $shart limit $from,$t_line");
-$q=query("select FOUND_ROWS()");
-$r=mysqli_fetch_row($q);
-$tedad=$r[0];
-
-pagination($pageNum,$tedad,$t_line);
+include($path.'admin/list.php');
 
 include($path.'admin/footer.php');
 ?>
