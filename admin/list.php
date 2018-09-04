@@ -26,8 +26,9 @@ $tedad=$r[0];
 		width: 0;
 	}
 </style>
-<div>
-	<form class="float-left col-md-4 p-0 mb-2">
+<div class="container-fluid">
+<div class="row">
+	<form class="col-md-4 p-0 mb-2">
 		<div class="input-group">
 			<input class="form-control" name="what" type="search" placeholder="جستجو" aria-label="جستجو" value="<?=htmlspecialchars($what);?>">
 			<div class="input-group-append">
@@ -35,7 +36,7 @@ $tedad=$r[0];
 			</div>
 		</div>
 	</form>
-	<div class="float-left col-md-6 mb-2 px-0 px-md-3">
+	<div class="col-md-6 mb-2 px-0 px-md-3">
 		<span class="input-group-text" style="white-space: inherit;">
 			‌
 			<small>
@@ -57,7 +58,8 @@ $tedad=$r[0];
 			</small>
 		</span>
 	</div>
-	<a href='add.php' class="btn btn-primary col-md-2 mb-2 float-right">افزودن</a>
+	<a href='add.php' class="btn btn-primary col-md-2 mb-2">افزودن</a>
+</div>
 </div>
 <div class="table-responsive table-striped table-hover">
 	<table class="table">
