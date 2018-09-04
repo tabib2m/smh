@@ -9,7 +9,6 @@ if(!$pageNum) $pageNum=1;
 $t_line=20;
 $from=($pageNum-1)*$t_line;
 
-
 $query=query("select SQL_CALC_FOUND_ROWS * from `$tableName` where $shart order by `date` desc limit $from,$t_line");
 $q=query("select FOUND_ROWS()");
 $r=mysqli_fetch_row($q);
@@ -27,39 +26,38 @@ $tedad=$r[0];
 	}
 </style>
 <div class="container-fluid">
-<div class="row">
-	<form class="col-md-4 p-0 mb-2">
-		<div class="input-group">
-			<input class="form-control" name="what" type="search" placeholder="جستجو" aria-label="جستجو" value="<?=htmlspecialchars($what);?>">
-			<div class="input-group-append">
-				<button class="btn btn-primary" type="submit">جستجو</button>
+	<div class="row">
+		<form class="col-md-4 p-0 mb-2">
+			<div class="input-group">
+				<input class="form-control" name="what" type="search" placeholder="جستجو" aria-label="جستجو" value="<?=htmlspecialchars($what);?>">
+				<div class="input-group-append">
+					<button class="btn btn-primary" type="submit">جستجو</button>
+				</div>
 			</div>
+		</form>
+		<div class="col-md-6 mb-2 px-0 px-md-3">
+			<span class="input-group-text" style="white-space: inherit;">
+				<small>
+				تعداد یافته‌ها: <strong><?=$tedad;?></strong>
+				<?php
+				if($what){
+					?>
+					در جستجوی عبارت «<strong><?=$what;?></strong>»
+					-
+					<?php
+					$url=$_GET;
+					unset($url['page'],$url['what']);
+					$url='?'.http_build_query($url);
+					?>
+					<a href="<?=$url;?>">نمایش تمام موارد</a>
+					<?php
+				}
+				?>
+				</small>
+			</span>
 		</div>
-	</form>
-	<div class="col-md-6 mb-2 px-0 px-md-3">
-		<span class="input-group-text" style="white-space: inherit;">
-			‌
-			<small>
-			تعداد یافته‌ها: <strong><?=$tedad;?></strong>
-			<?php
-			if($what){
-				?>
-				در جستجوی عبارت «<strong><?=$what;?></strong>»
-				-
-				<?php
-				$url=$_GET;
-				unset($url['page'],$url['what']);
-				$url='?'.http_build_query($url);
-				?>
-				<a href="<?=$url;?>">نمایش تمام موارد</a>
-				<?php
-			}
-			?>
-			</small>
-		</span>
+		<a href='add.php' class="btn btn-primary col-md-2 mb-2">افزودن</a>
 	</div>
-	<a href='add.php' class="btn btn-primary col-md-2 mb-2">افزودن</a>
-</div>
 </div>
 <div class="table-responsive table-striped table-hover">
 	<table class="table">
@@ -127,7 +125,6 @@ $tedad=$r[0];
 	if(!$tedad){
 		?>
 		<div class="alert alert-warning text-center" role="alert">
-			‌
 			<small>
 			هیچ موردی یافت نشد!
 			<?php
